@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   width: calc(100% - 1em);
 
   > div {
-    margin: 0.2em 0;
+    margin: 0.5em 0;
   }
 `;
 
@@ -37,8 +37,8 @@ function Input(props) {
 
   return (
     <Wrapper>
-      <div className="sm">{props.label}</div>
-      <div className="sm light">{props.description}</div>
+      <div className="sm bold">{props.label}</div>
+      <div className="sm italic indent">{props.description}</div>
       <InputField
         filled={value !== ""}
         inline={props.inline}
