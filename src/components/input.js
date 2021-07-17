@@ -8,10 +8,7 @@ const paddingWidth = 0.1;
 
 const Wrapper = styled.div`
   width: 100%;
-  :active,
-  .filled {
-    border-radius: ${common.borderradius};
-  }
+  border-radius: ${common.borderradius};
   > * {
     margin: 0.1em 0;
   }
@@ -23,6 +20,9 @@ const InputField = styled.input`
   border: none;
   border-left: ${common.accentwidth} solid
     ${props => (props.filled ? colors.dream : colors.wind)};
+  :focus {
+    border-left: ${common.accentwidth} solid ${colors.dream};
+  }
   background-color: ${colors.paper};
   box-shadow: ${boxshadow.down};
   padding: ${paddingWidth}em 0.5em;
