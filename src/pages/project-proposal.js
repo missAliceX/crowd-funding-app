@@ -26,9 +26,15 @@ function ProjectProposalPage() {
   return (
     <Page>
       <Content>
-        <div className="lg center">Create Project Propsal</div>
-        <Input inline placeholder="name your project" label="Project Name" />
+        <div className="lg center">Create Project Proposal</div>
         <Input
+          data-testid="project-name"
+          inline
+          placeholder="name your project"
+          label="Project Name"
+        />
+        <Input
+          data-testid="tagline"
           placeholder="enter your tagline"
           label="Tagline"
           description="This is the one liner that will get people to check out your project."

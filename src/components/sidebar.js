@@ -4,7 +4,7 @@ import colors from "styles/colors.module.scss";
 import boxshadow from "styles/boxshadow.module.scss";
 import arrowBack from "assets/icons/arrow_back.svg";
 import arrowForward from "assets/icons/arrow_forward.svg";
-import { Icon } from "components/icon";
+import Icon from "components/icon";
 
 const starSize = 30;
 
@@ -12,9 +12,10 @@ const Wrapper = styled.div.attrs(props => ({
   width: props.expanded ? "300px" : "80px"
 }))`
   width: ${props => props.width};
+  height: 100vh;
   box-shadow: ${boxshadow.right};
   transition: all ${common.animateduration};
-  transition-property: width, margin-left;
+  transition-property: width;
 
   @media only screen and (max-width: ${common.screensize}) {
     width: 0;
@@ -68,11 +69,16 @@ const Toggle = styled(Icon).attrs(props => ({
 function Sidebar(props) {
   const { expanded, onToggle } = props;
   return (
-    <Wrapper expanded={expanded} id="sidebar">
+    <Wrapper
+      expanded={expanded}
+      role="sidebar"
+      data-testid={props["data-testid"]}
+    >
       <Top />
       <Bottom>
         <Star expanded={expanded} />
         <Toggle
+          className="clickable"
           expanded={expanded}
           size="lg"
           onClick={() => onToggle(!expanded)}

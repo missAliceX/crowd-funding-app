@@ -1,4 +1,4 @@
-import ProjectProposalPage from "./pages/project-proposal";
+import ProjectProposalPage from "pages/project-proposal";
 import "index.css";
 import "styles/text.scss";
 

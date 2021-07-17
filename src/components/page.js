@@ -24,7 +24,7 @@ const Content = styled.div`
   overflow-x: hidden;
   transition: width ${common.animateduration};
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: ${common.screensize}) {
     width: calc(100% - ${props => (props.expanded ? 300 : 80)}px);
   }
 `;
@@ -32,7 +32,7 @@ const Content = styled.div`
 function Page(props) {
   const [expanded, setExpanded] = useState(false);
   return (
-    <Wrapper>
+    <Wrapper role="page" data-testid={props["data-testid"]}>
       <Sidebar onToggle={setExpanded} expanded={expanded} />
       <Content expanded={expanded}>{props.children}</Content>
     </Wrapper>

@@ -7,3 +7,12 @@ body {
 *:focus {
   outline: none;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
