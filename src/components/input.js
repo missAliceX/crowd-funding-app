@@ -4,15 +4,16 @@ import colors from "styles/colors.module.scss";
 import boxshadow from "styles/boxshadow.module.scss";
 import React, { useState } from "react";
 
-const paddingWidth = 0.1;
+const padding = 0.5;
 
 const Wrapper = styled.div`
-  width: 100%;
   border-radius: ${common.borderradius};
-  > * {
-    margin: 0.1em 0;
+  margin: ${padding}em;
+  width: calc(100% - 1em);
+
+  > div {
+    margin: 0.2em 0;
   }
-  margin: 0.5em;
 `;
 
 const InputField = styled.input`
@@ -25,9 +26,10 @@ const InputField = styled.input`
   }
   background-color: ${colors.paper};
   box-shadow: ${boxshadow.down};
-  padding: ${paddingWidth}em 0.5em;
-  width: ${props =>
-    `calc(${props.width} - ${2 * paddingWidth}em - ${common.accentwidth})`};
+  padding: 0.1em 0.5em;
+  width: ${props => (props.inline ? "" : `calc(100% - ${2 * padding}em)`)};
+  max-width: calc(100% - ${2 * padding}em);
+  text-overflow: ellipsis;
 `;
 
 function Input(props) {
@@ -38,8 +40,8 @@ function Input(props) {
       <div className="sm">{props.label}</div>
       <div className="sm light">{props.description}</div>
       <InputField
-        width={props.width}
         filled={value !== ""}
+        inline={props.inline}
         className="md"
         value={value}
         placeholder={props.placeholder}

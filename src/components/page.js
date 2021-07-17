@@ -9,17 +9,24 @@ const Wrapper = styled.div`
   width: 100%;
   background: ${colors.abyss};
   color: ${colors.paper};
-  > div {
-    display: inline-block;
+
+  @media only screen and (min-width: 600px) {
+    > div {
+      display: inline-block;
+    }
   }
 `;
 
 const Content = styled.div`
   height: 100vh;
-  width: calc(100% - ${props => (props.expanded ? 300 : 80)}px);
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   transition: width ${common.animateduration};
+
+  @media only screen and (min-width: 600px) {
+    width: calc(100% - ${props => (props.expanded ? 300 : 80)}px);
+  }
 `;
 
 function Page(props) {

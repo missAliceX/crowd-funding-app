@@ -13,19 +13,26 @@ const Wrapper = styled.div.attrs(props => ({
 }))`
   width: ${props => props.width};
   box-shadow: ${boxshadow.right};
-  transition: width ${common.animateduration};
+  transition: all ${common.animateduration};
+  transition-property: width, margin-left;
+
+  @media only screen and (max-width: 600px) {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
 `;
 
 const Top = styled.div`
   background: ${colors.sunset};
   width: 100%;
-  height: 200px;
+  height: 25vh;
 `;
 
 const Bottom = styled.div`
   background: ${colors.pathway};
   width: 100%;
-  height: calc(100vh - 200px);
+  height: 75vh;
   position: relative;
 `;
 
