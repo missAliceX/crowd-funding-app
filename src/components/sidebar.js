@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import common from "styles/common.module.scss";
 import colors from "styles/colors.module.scss";
 import boxshadow from "styles/boxshadow.module.scss";
 import arrowBack from "assets/icons/arrow_back.svg";
 import arrowForward from "assets/icons/arrow_forward.svg";
 import { Icon } from "components/icon";
-import React, { useState } from "react";
 
 const starSize = 30;
 
@@ -13,7 +13,7 @@ const Wrapper = styled.div.attrs(props => ({
 }))`
   width: ${props => props.width};
   box-shadow: ${boxshadow.right};
-  transition: width 0.4s;
+  transition: width ${common.animateduration};
 `;
 
 const Top = styled.div`
@@ -35,7 +35,7 @@ const Star = styled.div.attrs(props => ({
   height: ${starSize}px;
   width: ${starSize}px;
 
-  border-radius: 2px;
+  border-radius: ${common.borderradius};
   background-color: ${colors.white};
   box-shadow: ${boxshadow.illuminate};
 
@@ -44,7 +44,7 @@ const Star = styled.div.attrs(props => ({
   left: calc(50% - ${starSize / 2}px);
 
   transform: rotate(${props => props.deg}deg);
-  transition: transform 0.4s;
+  transition: transform ${common.animateduration};
 `;
 
 const Toggle = styled(Icon).attrs(props => ({
@@ -58,18 +58,17 @@ const Toggle = styled(Icon).attrs(props => ({
   filter: invert(1);
 `;
 
-function Sidebar() {
-  const [expanded, setExpanded] = useState(false);
-
+function Sidebar(props) {
+  const { expanded, onToggle } = props;
   return (
-    <Wrapper expanded={expanded}>
+    <Wrapper expanded={expanded} id="sidebar">
       <Top />
       <Bottom>
         <Star expanded={expanded} />
         <Toggle
           expanded={expanded}
           size="lg"
-          onClick={() => setExpanded(!expanded)}
+          onClick={() => onToggle(!expanded)}
         />
       </Bottom>
     </Wrapper>

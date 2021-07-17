@@ -15,23 +15,28 @@
   src: url("/assets/fonts/Saira-Bold.ttf") format("truetype");
 }
 
-text {
+body,
+.md {
   font-family: "Saira";
   font-style: normal;
   font-size: 24px;
 }
-text.sm {
+.sm {
   font-size: 18px;
 }
-text.lg {
+.lg {
   font-size: 36px;
 }
-text.light {
+.light {
   font-family: "Saira-Light";
 }
-text.italic {
+.italic {
   font-family: "Saira-Italic";
 }
-text.bold {
+.bold {
   font-family: "Saira-Bold";
+}
+.center {
+  margin: auto;
+  text-align: center;
 }
