@@ -16,7 +16,7 @@ const Wrapper = styled.div.attrs(props => ({
   transition: all ${common.animateduration};
   transition-property: width, margin-left;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: ${common.screensize}) {
     width: 0;
     height: 0;
     overflow: hidden;

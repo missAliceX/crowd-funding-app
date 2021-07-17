@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   background: ${colors.abyss};
   color: ${colors.paper};
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: ${common.screensize}) {
     > div {
       display: inline-block;
     }
