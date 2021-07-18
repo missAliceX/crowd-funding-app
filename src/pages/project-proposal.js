@@ -53,9 +53,9 @@ function ProjectProposalPage() {
         />
         <div className="sm bold">Problem Statements</div>
         <div className="sm italic indent">
-          Breakdown your problems into bullet points. People can say they also
-          have these problems by clicking on the Me Too button. This will help
-          define the scope of your project.
+          Breakdown your problems into bullet points. People can echo these
+          problems by clicking on the Me Too button. This will help define the
+          scope of your project.
         </div>
         <InputList id="problems" data-testid="problems" />
       </Form>
