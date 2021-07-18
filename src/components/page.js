@@ -34,7 +34,9 @@ function Page(props) {
   return (
     <Wrapper role="page" data-testid={props["data-testid"]}>
       <Sidebar
-        onToggle={setExpanded}
+        onToggle={() => {
+          setExpanded(!expanded);
+        }}
         expanded={expanded}
         data-testid={`${props["data-testid"]}-sidebar`}
       />

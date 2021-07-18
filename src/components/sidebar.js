@@ -5,6 +5,7 @@ import boxshadow from "styles/boxshadow.module.scss";
 import arrowBack from "assets/icons/arrow_back.svg";
 import arrowForward from "assets/icons/arrow_forward.svg";
 import Icon from "components/icon";
+import React, { useState } from "react";
 
 const starSize = common.sidebarstar;
 
@@ -67,7 +68,9 @@ const Toggle = styled(Icon).attrs(props => ({
 `;
 
 function Sidebar(props) {
-  const { expanded, onToggle } = props;
+  const { onToggle } = props;
+  const [expanded, setExpanded] = useState(props.expanded || false);
+
   return (
     <Wrapper
       expanded={expanded}
@@ -82,7 +85,7 @@ function Sidebar(props) {
           className="clickable"
           expanded={expanded}
           size="lg"
-          onClick={() => onToggle(!expanded)}
+          onClick={onToggle || (() => setExpanded(!expanded))}
         />
       </Bottom>
     </Wrapper>
