@@ -24,7 +24,7 @@ function InputList(props) {
             data-testid={`${id}-${i}`}
             value={item}
             onKeyPress={e => {
-              if (e.key === "Enter") {
+              if (e.key === "Enter" && e.target.value !== "") {
                 // Adds another input when the user hits the Enter key
                 items.push("");
                 setItems([...items]);
@@ -47,6 +47,7 @@ function InputList(props) {
               }
               setItems([...items]);
             }}
+            preventEdit={false}
           />
         );
       })}
