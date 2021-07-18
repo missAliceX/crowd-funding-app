@@ -22,9 +22,9 @@ const InputField = styled.input.attrs(props => {
   /* removes default highlight and border */
   border: none;
   border-left: ${common.accentwidth} solid
-    ${props => (props.filled ? colors.dream : colors.wind)};
+    ${props => (props.filled ? colors.flower : colors.wind)};
   :focus {
-    border-left: ${common.accentwidth} solid ${colors.dream};
+    border-left: ${common.accentwidth} solid ${colors.flower};
   }
   /* styling it a little bit */
   background-color: ${colors.paper};

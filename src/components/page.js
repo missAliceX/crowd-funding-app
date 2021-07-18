@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
   /* styling it a little bit */
-  background: ${colors.abyss};
+  background: ${colors.pathway};
   color: ${colors.paper};
 
   /* when the screen is big, place the sidebar and content side by side */
