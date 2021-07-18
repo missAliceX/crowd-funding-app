@@ -1,0 +1,45 @@
+@import "styles/colors.module";
+@import "styles/common.module";
+
+@font-face {
+  font-family: "Saira";
+  src: url("/assets/fonts/Saira-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Saira-Light";
+  src: url("/assets/fonts/Saira-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Saira-Italic";
+  src: url("/assets/fonts/Saira-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Saira-Bold";
+  src: url("/assets/fonts/Saira-Bold.ttf") format("truetype");
+}
+
+body,
+.md {
+  font-family: "Saira";
+  font-style: normal;
+  font-size: 24px;
+  color: $ink;
+}
+.sm {
+  font-size: 18px;
+}
+.lg {
+  font-size: 36px;
+}
+.light {
+  font-family: "Saira-Light";
+}
+.italic {
+  font-family: "Saira-Italic";
+}
+.bold {
+  font-family: "Saira-Bold";
+}
+.indent {
+  text-indent: 1em;
+}
