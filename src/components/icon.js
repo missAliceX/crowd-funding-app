@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import common from "styles/common.module.scss";
 
+// Icon is an image with the appropriate padding
 const Icon = styled.img.attrs(props => {
   const size = {
     lg: common.lg,

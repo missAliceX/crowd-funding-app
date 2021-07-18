@@ -1,17 +1,22 @@
+/* removes default margin */
 body {
   margin: 0;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* removes default outlines for textarea, input and select */
 *:focus {
   outline: none;
 }
 
+/* changes the cursor to pointer */
 .clickable {
   cursor: pointer;
 }
 
+/* centers the text and the container horizontally */
 .center {
   margin: auto;
   text-align: center;
