@@ -6,10 +6,10 @@ import arrowBack from "assets/icons/arrow_back.svg";
 import arrowForward from "assets/icons/arrow_forward.svg";
 import Icon from "components/icon";
 
-const starSize = 30;
+const starSize = common.sidebarstar;
 
 const Wrapper = styled.div.attrs(props => ({
-  width: props.expanded ? "300px" : "80px"
+  width: props.expanded ? common.sidebarwidthexpanded : common.sidebarwidth
 }))`
   width: ${props => props.width};
   height: 100vh;
@@ -78,6 +78,7 @@ function Sidebar(props) {
       <Bottom>
         <Star expanded={expanded} />
         <Toggle
+          data-testid={`${props["data-testid"]}-toggle`}
           className="clickable"
           expanded={expanded}
           size="lg"

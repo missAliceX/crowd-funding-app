@@ -43,13 +43,10 @@ function Input(props) {
   }, [props.value]);
 
   return (
-    <Wrapper
-      inline={props.inline}
-      role="input"
-      data-testid={props["data-testid"]}
-    >
+    <Wrapper inline={props.inline} role="input">
       <InputField
         id={props.id || ""}
+        data-testid={props["data-testid"]}
         className="md"
         value={value}
         filled={value !== ""}
@@ -66,6 +63,7 @@ function Input(props) {
         onBlur={props.onBlur}
       />
       <DeleteIcon
+        data-testid={`${props["data-testid"]}-delete`}
         visibility={value !== "" ? "visible" : "hidden"}
         className="sm clickable"
         src={close}

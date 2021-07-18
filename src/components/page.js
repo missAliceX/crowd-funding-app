@@ -33,7 +33,11 @@ function Page(props) {
   const [expanded, setExpanded] = useState(false);
   return (
     <Wrapper role="page" data-testid={props["data-testid"]}>
-      <Sidebar onToggle={setExpanded} expanded={expanded} />
+      <Sidebar
+        onToggle={setExpanded}
+        expanded={expanded}
+        data-testid={`${props["data-testid"]}-sidebar`}
+      />
       <Content expanded={expanded}>{props.children}</Content>
     </Wrapper>
   );
