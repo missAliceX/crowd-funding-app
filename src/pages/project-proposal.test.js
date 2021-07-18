@@ -29,7 +29,7 @@ test("renders problem statements", () => {
   render(<ProjectProposalPage />);
   const label = screen.getByText(/problem statements/i);
   expect(label).toBeInTheDocument();
-  const ele = screen.getByTestId("problem-statements");
+  const ele = screen.getByTestId("problems");
   expect(ele).toBeInTheDocument();
 });
 
