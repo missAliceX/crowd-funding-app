@@ -1,12 +1,12 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import ProjectProposalPage from "pages/project-proposal";
 
-test("renders title and sidebar", () => {
+test("renders title and navbar", () => {
   render(<ProjectProposalPage />);
   const title = screen.getByText(/create project proposal/i);
   expect(title).toBeInTheDocument();
-  const sidebar = screen.getByRole("sidebar");
-  expect(sidebar).toBeInTheDocument();
+  const navbar = screen.getByRole("navbar");
+  expect(navbar).toBeInTheDocument();
 });
 
 test("renders project name", () => {
