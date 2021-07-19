@@ -47,7 +47,7 @@ function InputList(props) {
               }
               setItems([...items]);
             }}
-            preventEdit={false}
+            autoFocus={true}
           />
         );
       })}

@@ -13,7 +13,10 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const InputField = styled.input`
+const InputField = styled.input.attrs(props => {
+  // autofocus allows the latest added input field to be in focus except for the special "add another" input field
+  return props.autoFocus !== undefined ? { autoFocus: true } : {};
+})`
   /* sets it to either block or inline-block */
   display: ${props => props.display};
   /* removes default highlight and border */
@@ -77,8 +80,7 @@ function Input(props) {
         onKeyPress={props.onKeyPress}
         // onBlur is triggered when you click outside of the input field
         onBlur={props.onBlur}
-        // autofocus allows the latest added input field to be in focus except for the special "add another" input field
-        autoFocus={props.preventEdit === false}
+        autoFocus={props.autoFocus}
       />
       <DeleteIcon
         data-testid={`${props["data-testid"]}-delete`}
