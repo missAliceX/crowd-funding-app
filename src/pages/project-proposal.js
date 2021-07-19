@@ -32,7 +32,7 @@ const Form = styled.div`
 
 function ProjectProposalPage() {
   return (
-    <Page>
+    <Page data-testid="project-proposal">
       <Form>
         <div className="lg center">Create Project Proposal</div>
         <div className="sm bold">Project Name</div>

@@ -9,7 +9,7 @@ test("renders page", () => {
   expect(page).toBeInTheDocument();
   const content = screen.getByText("something");
   expect(content).toBeInTheDocument();
-  const sidebar = screen.getByTestId("page-sidebar");
-  expect(sidebar).toBeInTheDocument();
-  expect(sidebar).toHaveStyle(`width: ${common.sidebarwidth}`);
+  const navbar = screen.getByTestId("page-navbar");
+  expect(navbar).toBeInTheDocument();
+  expect(navbar).toHaveStyle(`width: ${common.navbarwidth}`);
 });
