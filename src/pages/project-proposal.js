@@ -20,14 +20,6 @@ const Form = styled.div`
   > div {
     margin: 0.5em 0;
   }
-
-  /* when the screen is small, make it take up the whole content box */
-  @media only screen and (max-width: ${common.screensize}) {
-    width: calc(100% - 4em);
-    height: calc(100vh - 2em);
-    margin: 0;
-    overflow-y: auto;
-  }
 `;
 
 function ProjectProposalPage() {
