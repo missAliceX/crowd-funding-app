@@ -10,6 +10,11 @@ const Wrapper = styled.div`
 
   /* styling it a little bit */
   box-shadow: ${boxshadow.right};
+
+  /* when the screen is small, make it appear in the bottom */
+  @media only screen and (max-width: ${common.screensize}) {
+    /* add your responsive styles here */
+  }
 `;
 
 // Top is the sunset part of the navbar
@@ -17,6 +22,11 @@ const Top = styled.div`
   background: ${colors.sunset};
   width: 100%;
   height: 25vh;
+
+  /* only when the screen is small */
+  @media only screen and (max-width: ${common.screensize}) {
+    /* add your responsive styles here */
+  }
 `;
 
 // Bottom is the pathway part of the navbar
@@ -25,6 +35,11 @@ const Bottom = styled.div`
   width: 100%;
   height: 75vh;
   position: relative;
+
+  /* only when the screen is small */
+  @media only screen and (max-width: ${common.screensize}) {
+    /* add your responsive styles here */
+  }
 `;
 
 // Star is the diamond between the sunset and pathway, representing the sun
@@ -43,6 +58,11 @@ const Star = styled.div`
   top: -${common.navbarstar / 2}px;
   left: calc(50% - ${common.navbarstar / 2}px);
   transform: rotate(45deg);
+
+  /* only when the screen is small */
+  @media only screen and (max-width: ${common.screensize}) {
+    /* add your responsive styles here */
+  }
 `;
 
 // Navbar is a navbar that can open and close

@@ -24,6 +24,11 @@ const Content = styled.div`
   /* makes the content box scrollable */
   overflow-y: auto;
   overflow-x: hidden;
+
+  /* when the screen is small, make it appear in the bottom */
+  @media only screen and (max-width: ${common.screensize}) {
+    /* add your responsive styles here */
+  }
 `;
 
 // Page takes up the entire screen and contains a navbar and content box
