@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import Page from "components/page";
 
 test("renders page", () => {
-  render(<Page data-testid="page">something</Page>);
+  render(<Page id="page">something</Page>);
 
   const page = screen.getByTestId("page");
   expect(page).toBeInTheDocument();
