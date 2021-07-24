@@ -77,7 +77,7 @@ const Star = styled.div`
 // Navbar is a navbar that can open and close
 function Navbar(props) {
   return (
-    <Wrapper data-testid={props["data-testid"]} role="navbar">
+    <Wrapper id={props.id} data-testid={props.id}>
       <Top />
       <Bottom>
         <Star />

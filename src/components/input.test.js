@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import Input from "components/input";
 
 test("renders inline input", () => {
-  render(<Input data-testid="input" value="" inline />);
+  render(<Input id="input" value="" inline />);
 
   const input = screen.getByTestId("input");
   expect(input).toBeInTheDocument();
@@ -10,7 +10,7 @@ test("renders inline input", () => {
 });
 
 test("renders full width input", () => {
-  render(<Input data-testid="input" value="" />);
+  render(<Input id="input" value="" />);
 
   const input = screen.getByTestId("input");
   expect(input).toBeInTheDocument();
@@ -18,7 +18,7 @@ test("renders full width input", () => {
 });
 
 test("change input to show and hide delete icon", () => {
-  render(<Input data-testid="input" value="" />);
+  render(<Input id="input" value="" />);
 
   const deleteIcon = screen.getByTestId("input-delete");
   expect(deleteIcon).toBeInTheDocument();

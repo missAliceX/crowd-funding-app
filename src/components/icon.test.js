@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Icon from "components/icon";
 
 test("renders large icon", () => {
-  render(<Icon data-testid="icon" size="lg" />);
+  render(<Icon id="icon" size="lg" />);
   const icon = screen.getByTestId("icon");
   expect(icon).toBeInTheDocument();
   expect.toHaveStyle(`width: ${common.lg}px`);
@@ -12,7 +12,7 @@ test("renders large icon", () => {
 });
 
 test("renders default icon", () => {
-  render(<Icon data-testid="icon" />);
+  render(<Icon id="icon" />);
   const icon = screen.getByTestId("icon");
   expect(icon).toBeInTheDocument();
   expect.toHaveStyle(`width: ${common.md}px`);
@@ -21,7 +21,7 @@ test("renders default icon", () => {
 });
 
 test("renders small icon", () => {
-  render(<Icon data-testid="icon" size="sm" />);
+  render(<Icon id="icon" size="sm" />);
   const icon = screen.getByTestId("icon");
   expect(icon).toBeInTheDocument();
   expect.toHaveStyle(`width: ${common.sm}px`);
