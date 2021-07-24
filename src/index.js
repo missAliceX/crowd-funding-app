@@ -2,7 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "index.css";
 import App from "App";
-import reportWebVitals from "./reportWebVitals";
+import reportWebVitals from "reportWebVitals";
+
+// The mock server only runs when we are in development mode
+if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('mocks/browser')
+  worker.start()
+}
+
 
 ReactDOM.render(
   <React.StrictMode>

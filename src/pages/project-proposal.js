@@ -6,6 +6,7 @@ import Input from 'components/input'
 import Button from 'components/button'
 import InputList from 'components/input-list'
 import { handleSubmit } from 'hooks/form'
+import { proposeProject } from 'api/projects'
 
 const Form = styled.form`
   /* adjusts the size of the form */
@@ -40,10 +41,18 @@ const ButtonsWrapper = styled.div`
 
 function ProjectProposalPage (props) {
   const onSubmit = (data, errs) => {
-    console.log(data)
+    // The form has some invalid fields
     if (errs.length > 0) {
-      console.error(errs)
+      console.error("invalid fields", errs)
+      return
     }
+
+    // We will send the data to the server
+    proposeProject(data).then(() => {
+      console.debug("server received and stored project proposal")
+    }).catch((err) => {
+      console.error("failed to propose project")
+    });
   }
 
   return (
