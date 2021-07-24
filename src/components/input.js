@@ -79,7 +79,10 @@ function Input (props) {
           if (props.onChange) props.onChange(e)
         }}
         // onKeyPress is triggered when you hit a key while the input field is selected
-        onKeyPress={props.onKeyPress}
+        onKeyPress={e => {
+          if (e.key === 'Enter' && !props.submitFormOnEnter) e.preventDefault()
+          if (props.onKeyPress) props.onKeyPress(e)
+        }}
         // onBlur is triggered when you click outside of the input field
         onBlur={props.onBlur}
         autoFocus={props.autoFocus}
