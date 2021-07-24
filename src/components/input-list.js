@@ -13,15 +13,15 @@ function InputList(props) {
   // items: a list of strings that represents the text in the input fields
   // setItems: updates old items with the given new items
   const [items, setItems] = useState(props.items || []);
-  const id = props["data-testid"];
 
   return (
-    <Wrapper role="list" data-testid={id}>
+    <Wrapper id={props.id} data-testid={props.id}>
       {items.map((item, i) => {
         return (
           <Input
+            id={`${props.id}-${i}`}
+            data-testid={`${props.id}-${i}`}
             key={i}
-            data-testid={`${id}-${i}`}
             value={item}
             onKeyPress={e => {
               if (e.key === "Enter" && e.target.value !== "") {
@@ -52,7 +52,7 @@ function InputList(props) {
         );
       })}
       <Input
-        data-testid={`${id}-add`}
+        id={`${props.id}-add`}
         placeholder="add another..."
         // preventEdit is a flag to tell the Input component it should not be editted}
         preventEdit={true}

@@ -34,8 +34,8 @@ const Content = styled.div`
 // Page takes up the entire screen and contains a navbar and content box
 function Page(props) {
   return (
-    <Wrapper role="page" data-testid={props["data-testid"]}>
-      <Navbar data-testid={`${props["data-testid"]}-navbar`} />
+    <Wrapper id={props.id} data-testid={props.id}>
+      <Navbar id={`${props.id}-navbar`} />
       <Content>{props.children}</Content>
     </Wrapper>
   );

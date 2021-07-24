@@ -9,7 +9,7 @@ const resizeWindow = (width, height) => {
 };
 
 test("render navbar landscape", () => {
-  render(<Navbar data-testid="navbar" />);
+  render(<Navbar id="navbar" />);
 
   const navbar = screen.getByTestId("navbar");
   expect(navbar).toBeInTheDocument();
@@ -17,7 +17,7 @@ test("render navbar landscape", () => {
 });
 
 test("render navbar portrait", () => {
-  render(<Navbar data-testid="navbar" />);
+  render(<Navbar id="navbar" />);
   resizeWindow(250, 600);
 
   const navbar = screen.getByTestId("navbar");
