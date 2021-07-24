@@ -39,38 +39,13 @@ test('renders problem statements', () => {
   expect(problem1).toBeInTheDocument()
 })
 
-// Add these tests back in once you are ready
-// test("renders solutions", () => {
-//   render(<ProjectProposalPage id="project-proposal-page" />);
-//   const label = screen.getByText(/solutions/i);
-//   expect(label).toBeInTheDocument();
-//   const ele = screen.getByTestId("solutions");
-//   expect(ele).toBeInTheDocument();
-// });
-//
-// test("renders tags", () => {
-//   render(<ProjectProposalPage id="project-proposal-page" />);
-//   const label = screen.getByText(/tags/i);
-//   expect(label).toBeInTheDocument();
-//   const ele = screen.getByTestId("tags");
-//   expect(ele).toBeInTheDocument();
-// });
-//
-// test("renders cover image url", () => {
-//   render(<ProjectProposalPage id="project-proposal-page" />);
-//   const label = screen.getByText(/cover image url/i);
-//   expect(label).toBeInTheDocument();
-//   const ele = screen.getByTestId("cover-image-url");
-//   expect(ele).toBeInTheDocument();
-// });
-//
-// test("renders youtube video url", () => {
-//   render(<ProjectProposalPage id="project-proposal-page" />);
-//   const label = screen.getByText(/youtube video url/i);
-//   expect(label).toBeInTheDocument();
-//   const ele = screen.getByTestId("youtube-video-url");
-//   expect(ele).toBeInTheDocument();
-// });
-//
-// test("collects form data when button is clicked", () => {
-// })
+// Implement these tests back in once you are ready
+test('renders solutions', () => {})
+
+test('renders tags', () => {})
+
+test('renders cover image url', () => {})
+
+test('renders cover image preview', () => {})
+
+test('sends form data to server on button click', () => {})

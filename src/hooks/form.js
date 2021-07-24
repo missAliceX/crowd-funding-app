@@ -22,7 +22,7 @@ const handleSubmit = (handler, validator = {}) => {
         ? data
         : errs
 
-      // Format it into snake case
+      // Format the key name into snake case so the server can understand it
       const newKey = keys[0].replace(/-/g, '_')
       // Push the item to the list if it ends with "-(some_number)"
       if (keys.length === 2) {
